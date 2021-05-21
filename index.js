@@ -26,7 +26,7 @@ app.get('/reg', function(req, res){
             pass: "",
             email: "",
         },
-        reg_ok: false
+        reg_ok: false  
     });
 });
 app.post('/reg', async function(req, res){
