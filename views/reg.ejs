@@ -1,0 +1,27 @@
+<% if (reg_ok == true) { %>
+<p style="color: rgb(47, 255, 57);">
+Вы успешно зарегестрировались</p>
+<a href="/">На главную</a>
+<% } else { %>
+<p style="color:red">
+    <%= alert %>
+</p>
+<form method="POST">
+    <p> 
+        <label for="login">Лохин</label>
+        <input name="login" id="login" value="<%= form.login %>"/>
+        
+    </p>
+    <p>
+        <label for="pass">Паролька</label>
+        <input type="password" name="pass" id="pass" value="<%= form.pass %>" maxlength="16" minlength="6"  />
+    </p>
+    <p>
+        <label for="email">Почта</label>
+        <input type="email" name="email" id="email" value="<%= form.email %>" />
+    </p>
+    <p>
+        <input type="submit"/>
+    </p>
+</form>
+<% } %>
